@@ -1,0 +1,35 @@
+body {
+  background: linear-gradient(45deg, indigo, indianred);
+  color: navy;
+  height: 100vh;
+}
+.container {
+  background: bisque;
+  max-width: 20rem;
+  padding: 1em;
+  font-size: 2.3em;
+  margin: 10vh auto;
+}
+li {
+  border-bottom: 1px solid #fff8;
+}
+button {
+  /* background: white; */
+  margin: 0.5em;
+  padding: 1em;
+  /* font-size: inherit; */
+  font-size: 0.5em;
+  border: 2px solid navy;
+  box-shadow: 5px 5px 0.2em navy;
+  /* color: navy; */
+  /* opacity: 0.5; */
+}
+button:hover,
+button.active {
+  background-color: lightcoral;
+  cursor: pointer;
+  color: white;
+  /* opacity: 1; */
+
+  /* color: cornflowerblue; */
+}
