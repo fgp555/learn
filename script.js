@@ -14,18 +14,18 @@ let pag = 1;
 let rows = 2;
 
 // ========== function 1 DisplayList... ==========
-function DisplayList(list_1, ul_1, row_1, pag_1) {
+function DisplayList(list_1, ul_1, rows_1, pag_1) {
     ul_1.innerHTML = '';
     pag_1--;
 
-    let start = row_1 * pag_1; // 2 * 0 = 0
-    let end = start + row_1; // 0 + 2 = 2
+    let start = rows_1 * pag_1; // 2 * 0 = 0
+    let end = start + rows_1; // 0 + 2 = 2
 
     let listSlice = list_1.slice(start, end);
     
     for (let i = 0; i < listSlice.length; i++) {
         let item = listSlice[i];
-        console.log(list_1[i])
+        // console.log(list_1[i])
 
         let createLi = document.createElement('li');
         createLi.innerText = item;
@@ -35,3 +35,18 @@ function DisplayList(list_1, ul_1, row_1, pag_1) {
 }
 DisplayList(list, ul, rows, pag)
 // ========== function 1 DisplayList. ==========
+
+// ========== functio 2 CreatePags... ==========
+function CreatePags(list_2, nav_2, rows_2) {
+    nav_2.innerHTML = '';
+
+    let list_rows = list_2.length / rows_2;
+    let mathCeil = list_rows;
+
+    for (let i = 1; i < mathCeil + 1; i++){
+        console.log(i)
+    }
+}
+
+CreatePags(list, nav, rows)
+// ========== functio 2 CreatePags. ==========
