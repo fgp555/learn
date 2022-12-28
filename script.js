@@ -45,7 +45,7 @@ function CreatePags(list_2, nav_2, rows_2) {
 
     for (let i = 1; i < mathCeil + 1; i++){
         // console.log(i);
-        let btn = DisplayBtn(i);
+        let btn = DisplayBtn(i, list_2);
         nav_2.appendChild(btn)
     }
 }
@@ -55,12 +55,28 @@ CreatePags(list, nav, rows)
 // 
 
 // ========== function 3 DisplayBtn... ==========
-function DisplayBtn(pageNum) {
+function DisplayBtn(pageNum, items) {
     let createBtn = document.createElement('button');
     createBtn.innerText = pageNum;
 
     if (pag == pageNum) createBtn.classList.add('active');
 
+    // ========== function 4 ClickBtn...  ==========
+    createBtn.addEventListener('click', function () {
+        pag = pageNum;
+        DisplayList(items, ul, rows, pag)
+
+        // classList...
+        let btnActive = document.querySelector('.pags button.active');
+        btnActive.classList.remove('active');
+
+        createBtn.classList.add("active")
+        // classList.
+    })
+    // ========== function 4 ClickBtn.  ==========
+    
+
     return createBtn;
 }
 // ========== function 3 DisplayBtn. ==========
+
