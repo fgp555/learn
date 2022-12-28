@@ -5,13 +5,18 @@ const list = [
     'list item c',
     'list item d',
     'list item e',
-]
+    'list item a',
+    'list item b',
+    'list item c',
+    'list item d',
+    'list item e',
+];
 
 const ul = document.querySelector('.pags ul');
 const nav = document.querySelector('.pags nav');
 
 let pag = 1;
-let rows = 2;
+let rows = 4;
 
 // ========== function 1 DisplayList... ==========
 function DisplayList(list_1, ul_1, rows_1, pag_1) {
